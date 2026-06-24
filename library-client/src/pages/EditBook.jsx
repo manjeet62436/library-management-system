@@ -18,7 +18,7 @@ function EditBook() {
     const fetchBook = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/books/${id}`
+          `https://library-management-system-cgho.onrender.com/api/books/${id}`
         );
 
         setFormData({
@@ -47,7 +47,7 @@ function EditBook() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/books/${id}`,
+        `https://library-management-system-cgho.onrender.com/api/books/${id}`,
         formData
       );
 

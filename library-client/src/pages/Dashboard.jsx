@@ -14,7 +14,7 @@ function Dashboard() {
     const fetchStats = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/dashboard/stats"
+          "https://library-management-system-cgho.onrender.com/api/dashboard/stats"
         );
 
         setStats(res.data);

@@ -8,7 +8,7 @@ function IssuedBooks() {
   const fetchIssuedBooks = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/issues/all"
+        "https://library-management-system-cgho.onrender.com/api/issues/all"
       );
 
       setIssuedBooks(res.data.issuedBooks);
@@ -20,7 +20,7 @@ function IssuedBooks() {
   const handleReturnBook = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/issues/return/${id}`
+        `https://library-management-system-cgho.onrender.com/api/issues/return/${id}`
       );
 
       alert(res.data.message);

@@ -19,7 +19,7 @@ function BookDetails() {
 
   try {
     await axios.delete(
-      `http://localhost:5000/api/books/${id}`
+      `https://library-management-system-cgho.onrender.com/api/books/${id}`
     );
 
     alert("Book Deleted Successfully");
@@ -33,13 +33,13 @@ function BookDetails() {
 const handleIssueBook = async () => {
   try {
     const usersRes = await axios.get(
-      "http://localhost:5000/api/users/all"
+      "https://library-management-system-cgho.onrender.com/api/users/all"
     );
 
     const userId = usersRes.data.users[0]._id;
 
     const res = await axios.post(
-      "http://localhost:5000/api/issues",
+      "https://library-management-system-cgho.onrender.com/api/issues",
       {
         userId,
         bookId: id,
@@ -63,7 +63,7 @@ const handleIssueBook = async () => {
     const fetchBook = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/books/${id}`
+          `https://library-management-system-cgho.onrender.com/api/books/${id}`
         );
 
         setBook(res.data.book);
